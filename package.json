@@ -1,0 +1,38 @@
+{
+  "name": "pdf",
+  "version": "0.2.0",
+  "description": "AWS Lambda PDF generation",
+  "author": "Aki Rautio <aki.rautio@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "src/pdf.js",
+  "directories": {
+    "src": "src"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "start:local": "./node_modules/.bin/cross-env AWS_EXECUTION_ENV=AWS_Lambda_nodejs10.x AWS_LAMBDA_FUNCTION_NAME=pdf AWS_PROFILE=pdf serverless offline start",
+    "deploy:dev": "serverless deploy --stage development",
+    "deploy:prod": "serverless deploy --stage  production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chrome-aws-lambda": "^2.0.2",
+    "knex": "^0.20.8",
+    "pg": "^7.17.0",
+    "pg-hstore": "^2.3.3",
+    "pug": "^2.0.4",
+    "puppeteer-core": "^2.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.0",
+    "ejs": "^3.0.1",
+    "html-pdf": "^2.2.0",
+    "path": "^0.12.7",
+    "serverless": "^1.61.3",
+    "serverless-apigw-binary": "^0.4.4",
+    "serverless-offline": "^5.12.1"
+  }
+}
