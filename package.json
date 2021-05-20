@@ -29,7 +29,7 @@
   "devDependencies": {
     "cross-env": "^7.0.0",
     "ejs": "^3.0.1",
-    "html-pdf": "^2.2.0",
+    "html-pdf": "^3.0.1",
     "path": "^0.12.7",
     "serverless": "^1.61.3",
     "serverless-apigw-binary": "^0.4.4",
